@@ -1,0 +1,5 @@
+{
+    "api_key": "e2fc7fe2650c6d3169e4318c11eda1c5",
+    "db_path": "sqlite:///C:/Users/Admin/Desktop/APP 2 Weather monitoring/backend/realdata.db",
+    "alert_threshold": 35
+}
