@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Monitoring Dashboard</h1>
+            <h2>Get the latest weather information for your cities</h2>
+        </header>
+        
+        <!-- Daily Weather Summary Section -->
+        <section class="section">
+            <div class="section-header">Daily Weather Summary</div>
+            <div class="section-content" id="daily-summary-content">
+                <!-- Weather summary will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Weather Summary Section -->
+        <section class="section">
+            <div class="section-header">City Weather Summary</div>
+            <div class="section-content" id="summary-content">
+                <div class="city-summary" id="city1-summary">
+                    <strong>City 1</strong>
+                    <div class="temp-info">Temperature: <span id="city1-temp">Loading...</span></div>
+                    <div>Condition: <span id="city1-condition">Loading...</span></div>
+                    <div>Humidity: <span id="city1-humidity">Loading...</span></div>
+                    <div>Wind Speed: <span id="city1-wind-speed">Loading...</span></div>
+                </div>
+                <!-- More city summaries... -->
+            </div>
+        </section>
+
+        <!-- Weather Alert Section -->
+        <section class="section">
+            <div class="section-header">Weather Alerts</div>
+            <div class="section-content" id="alert-section">
+                <div class="alert" id="alert-message">
+                    No weather alerts currently.
+                </div>
+            </div>
+        </section>
+
+        <!-- Weather Chart Section -->
+        <section class="section">
+            <div class="section-header">Weather Trends</div>
+            <div id="weatherTrends">
+                <div class="city-chart" id="delhi-chart-container">
+                    <h3>Delhi</h3>
+                    <canvas id="delhiChart"></canvas>
+                </div>
+                <div class="city-chart" id="mumbai-chart-container">
+                    <h3>Mumbai</h3>
+                    <canvas id="mumbaiChart"></canvas>
+                </div>
+                <div class="city-chart" id="chennai-chart-container">
+                    <h3>Chennai</h3>
+                    <canvas id="chennaiChart"></canvas>
+                </div>
+                <div class="city-chart" id="bangalore-chart-container">
+                    <h3>Bangalore</h3>
+                    <canvas id="bangaloreChart"></canvas>
+                </div>
+                <div class="city-chart" id="kolkata-chart-container">
+                    <h3>Kolkata</h3>
+                    <canvas id="kolkataChart"></canvas>
+                </div>
+                <div class="city-chart" id="hyderabad-chart-container">
+                    <h3>Hyderabad</h3>
+                    <canvas id="hyderabadChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer -->
+        <footer>
+            <p>Developed by <a href="#">Suhas Suresha</a>. Powered by OpenWeather API.</p>
+        </footer>
+    </div>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>  <!-- Your app.js file -->
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
